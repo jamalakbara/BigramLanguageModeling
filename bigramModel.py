@@ -102,7 +102,7 @@ def inputKalimat():
 
             for i in range(len(inp.split()) - 1):
                 inputList.append((inp.split()[i], inp.split()[i + 1]))
-            print(inputList)
+            print(inputList) 
 
             # ------------------------------ Bigram Model -------------------------------------
 
