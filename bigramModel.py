@@ -70,7 +70,8 @@ def inputTeks():
 
     kata = ''
     while (kata != '9999' or ''):
-        kata = input("Masukkan kata: ")     #untuk dapat menginputkan kata
+        print('Pengecekan Prediksi kemunculan kata selanjutnya')
+        kata = input("Masukkan kata (9999 untuk selesai): ")     #untuk dapat menginputkan kata (ketik 9999 untuk selesai)
         kata = kata.lower()                 #mengecilkan kata yang di inputkan
 
 
@@ -86,12 +87,14 @@ def inputTeks():
             print('Kata Selanjutnya: ' + max_prob[1] + '\n')        #menampilkan kata selanjutnya
         else:
             print('kata tidak ada atau yang diinputkan bukan kata') #ketika kata tidak ada atau yang diinputkan bukan kata
+            print('----------------------------------------------')
 
 def inputKalimat():
     try:
         inp = ''
         while (inp != '9999'):
-            inp = input('Masukan Kalimat: ')        #untuk dapat menginputkan kalimat
+            print('pengecekan probabilitas dan perplexity')
+            inp = input('Masukan Kalimat (9999 untuk selesai): ')        #untuk dapat menginputkan kalimat (ketik 9999 untuk selesai)
             inp = inp.lower()                       #mengecilkan kalimat yang di inputkan
 
             inputList = []                          #list untuk menyimpan bigram yang diinputkan
@@ -141,6 +144,7 @@ def inputKalimat():
             # Perplexity
             perplexity = (1 / outputProb2)**(1 / len(inputList))                                        #perhitungan perplexity = (1/P)pangkat(1/n)
             print('Perplexity : ' + str(perplexity))
+            print('----------------------------------------------')
 
     except ZeroDivisionError as detail:
         print('Handling run-time error:', detail)                                                       #melakukan handling error apabila menemukan error tidak bissa dibagi 0
