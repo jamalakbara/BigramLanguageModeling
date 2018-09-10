@@ -142,7 +142,7 @@ def inputKalimat():
             print('\n' + 'Add One Probablility = ' + str(outputProb2) + '\n')
 
             # Perplexity
-            perplexity = (1 / outputProb2)**(1 / len(inputList))                                        #perhitungan perplexity = (1/P)pangkat(1/n)
+            perplexity = (1 / outputProb2)**(1 / len(inputList))                                        #perhitungan perplexity = (1/P)pangkat(1/n) = (akar n dari 1/n)
             print('Perplexity : ' + str(perplexity))
             print('----------------------------------------------')
 
@@ -159,6 +159,19 @@ if __name__ == '__main__':                                                      
     bigramProb = probBigram(bigramList, bigramFreq, unigramFreq)                                        #melakukan assign value yang didapat dari fungsi probBigram dengan parameter variable sebelumnya
     bigramAddOne, addOneCstar = addOneSmothing(bigramList,bigramFreq,unigramFreq)                       #melakukan assign value yang didapat dari fungsi AddOneSmothing dengan parameter variable sebelumnya
 
-    inputTeks()                                                                                         #fungsi inputTeks untuk pengecekan kata selanjutnya dari input kata
-    inputKalimat()                                                                                      #fungis inputKalimat untukpengecekan probabilitas dan perplexity dari input kalimat
+    i = ''
+    while(i != '0'):
+        print('---------------------')
+        print('1. Prediksi kata')
+        print('2. Kalimat')
+        print('0. keluar')
+        print('---------------------')
+        i = input('Masukan Pilihan: ')
+        if(i == '1'):
+            inputTeks()                                             #fungsi inputTeks untuk pengecekan kata selanjutnya dari input kata
+        if(i == '2'):
+            inputKalimat()                                          #fungis inputKalimat untukpengecekan probabilitas dan perplexity dari input kalimat
+
+
+
 
