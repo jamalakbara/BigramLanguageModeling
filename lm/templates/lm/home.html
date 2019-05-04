@@ -1,0 +1,8 @@
+{% extends 'lm/base.html' %}
+
+{% block content %}
+    <div class="home-content">
+        <a class="btn" href="{% url 'lm-word' %}">Prediksi Kata</a>
+        <a class="btn" href="{% url 'lm-perplex' %}">Bigram dan Perplexity</a>
+    </div>
+{% endblock %}
